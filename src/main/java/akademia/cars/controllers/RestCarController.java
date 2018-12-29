@@ -49,6 +49,13 @@ public class RestCarController {
 
         return carRepository.findByYear(year);
     }
+    @GetMapping("cars/power")
+    public List<Car> getCarsBetweenPower(
+            @RequestParam(value = "from") String from,
+            @RequestParam(value = "to") String to
+    ) {
 
+        return carRepository.findByBetweenPower(from,to);
+    }
 
 }
