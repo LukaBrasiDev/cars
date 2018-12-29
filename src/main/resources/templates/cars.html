@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<!--to jest fragment nagłówka: fragments/head.html-->
+<head th:replace="fragments/head :: head"></head>
+
+<body>
+
+<!--główny kontener-->
+<div class="container">
+
+    <!--to jest fragment tabeli z pliku table.html-->
+    <div class="row" th:replace="fragments/table :: table"></div>
+
+    <!--przycisk pochodzi z buttons.html-->
+    <div class="row" th:replace="fragments/buttons :: back-button"></div>
+
+
+</div>
+
+</body>
+
+</html>

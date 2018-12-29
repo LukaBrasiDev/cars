@@ -1,0 +1,29 @@
+<div class="row" xmlns:th="http://www.w3.org/1999/xhtml" th:fragment="table">
+    <div class="col-md-12">
+        <table class="table table-striped">
+            <tr>
+                <th>Brand</th>
+                <th>Model</th>
+                <th>Power</th>
+                <th>Year production</th>
+                <th>Picture</th>
+            </tr>
+
+            <tr th:each="car : ${cars}">
+                <td th:text="${car.getBrand()}"></td>
+                <td th:text="${car.getModel()}"></td>
+                <td th:text="${car.getPower()}"></td>
+                <td th:text="${car.getYear()}"></td>
+
+                <td>
+                    <div class="figure rotate" style="width: 20%; height: 20%">
+                        <img th:src="${car.getPicture()}">
+                    </div>
+                </td>
+                <td>
+                    <button type="button">details</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
